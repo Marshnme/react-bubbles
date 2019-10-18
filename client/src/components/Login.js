@@ -1,12 +1,11 @@
 import React,{useState, useEffect} from "react";
 import {axiosWithAuth} from "../utils/axiosWithAuth";
-import { prependOnceListener } from "cluster";
+
 
 
 const Login = (props) => {
   const [form, setForm] = useState({username:"",password:""})
-  // make a post request to retrieve a token from the api
-  // when you have handled the token, navigate to the BubblePage route
+  
 
   const  handleSubmit = e => {
     e.preventDefault();
@@ -15,7 +14,7 @@ const Login = (props) => {
     .then(res =>{
         console.log("post res",res)
         localStorage.setItem("token",res.data.payload)
-        props.history.push()
+        props.history.push("/bubble-page")
     })
 
   }
