@@ -46,7 +46,7 @@ const ColorList = ({ colors, updateColors }) => {
       console.log("delete res",res)
       const newDeleted = colors.filter(color =>
         res.data !== color.id)
-           
+
         
     
     console.log("newDeleted",newDeleted)
